@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "96301979-d83c-4238-8399-bfb796a4ee6b",
+		"name": "CAR RENTAL SYSTEM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24812897"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/test/user/feedback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/user/feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/feedback/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"o_id\": 20,\r\n        \"cleaning_points\": 4,\r\n        \"comments\": \"Good\",\r\n        \"service_points\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/user/feedback/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"feedback",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/login?username=ram&password=ram1234",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/user/login?username=ram&password=ram1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ram"
+						},
+						{
+							"key": "password",
+							"value": "ram1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/test/user/pickup/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/user/pickup/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"pickup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/test/user/pickup/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"p_date\":\"2023-02-23\",\r\n    \"p_time\":\"05:25:00\",\r\n    \"r_date\":\"2023-02-24\",\r\n    \"r_time\":\"05:25:00\",\r\n    \"location\":\r\n{\r\n        \"pincode\": 4411058,\r\n        \"b_no\": \"31-b3\",\r\n        \"street\": \"Rahuri1\",\r\n        \"city\": \"Ahmednagar1\",\r\n        \"state\": \"Maharashtra1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/user/pickup/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"pickup",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/admin/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/car/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"car_model\": 150,\r\n        \"insurance_no\": \"inoas213\",\r\n        \"car_type\": \"HATCHBACK\",\r\n        \"car_company\": \"tata\",\r\n        \"insuranceperiod\": \"2026-01-01\",\r\n        \"car_gear_type\": \"auto\",\r\n        \"car_capacity\": 4,\r\n        \"car_fuel\": \"disel\",\r\n        \"car_rent_per_day\": 5000.0,\r\n        \"car_manufact_year\": \"2020-01-01\",\r\n        \"car_average\": 19.0,\r\n        \"us1\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/admin/car/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"car",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/driver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/admin/driver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/driver/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"license_no\": \"L-235\",\r\n        \"adhar_name\": \"Sandy solanki\",\r\n        \"address\": {\r\n            \"pincode\": 442225,\r\n            \"b_no\": \"b7tower\",\r\n            \"street\": \"nashik road\",\r\n            \"city\": \"solapur\",\r\n            \"state\": \"maharastra\"\r\n        },\r\n        \"dob\": \"1992-04-10\",\r\n        \"gender\": true,\r\n        \"email\": \"mayur@gmail.com\",\r\n        \"adhar_no\": 1234567812345619,\r\n        \"mob_no\": 1234567809,\r\n        \"us1\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/admin/driver/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"driver",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"adhar_no\": 3232323232326548,\r\n        \"username\": \"sam1\",\r\n        \"password\": \"sam1234\",\r\n        \"adhar_name\": \"Sam Sharma\",\r\n        \"address\": {\r\n            \"pincode\": 440011,\r\n            \"b_no\": \"b4\",\r\n            \"street\": \"mJ road\",\r\n            \"city\": \"pune\",\r\n            \"state\": \"maharashtra\"\r\n        },\r\n        \"dob\": \"1995-02-02\",\r\n        \"gender\": true,\r\n        \"email\": \"sam@gmail.com\",\r\n        \"mob_no\": 9977556698,\r\n        \"license_no\": \"js863\",\r\n        \"role\": \"USER\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/user/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/query/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"q_id\": 3,\r\n        \"query_comments\": \"KSS\",\r\n        \"staus\": true,\r\n        \"order\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/user/query/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"query",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/admin/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/admin/location/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pincode\": 4411059,\r\n    \"b_no\": \"31-b23\",\r\n    \"street\": \"Rahata\",\r\n    \"city\": \"Ahmednagar\",\r\n    \"state\": \"Maharashtra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/admin/location/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"admin",
+						"location",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/test/user/orderdetails/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test/user/orderdetails/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"orderdetails",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/orderdetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/user/orderdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"orderdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/paymentdetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/user/paymentdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"paymentdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/paymentdetails/add",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"o_id\": 2,\r\n        \"total_amount\": 7000.0,\r\n        \"cards\": null,\r\n        \"cash\":true\r\n        \r\n       \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test/user/paymentdetails/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"paymentdetails",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/test/user/returnform",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/user/returnform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"user",
+						"returnform"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

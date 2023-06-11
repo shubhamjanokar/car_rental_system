@@ -1,0 +1,60 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: localhost    Database: testingproject
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `orders_details`
+--
+
+DROP TABLE IF EXISTS `orders_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders_details` (
+  `o_id` bigint NOT NULL,
+  `car_model` int DEFAULT NULL,
+  `license_no` varchar(255) DEFAULT NULL,
+  `adhar_no` bigint DEFAULT NULL,
+  PRIMARY KEY (`o_id`),
+  KEY `FKa333w2ba4sw2kp9q20g33jd9n` (`car_model`),
+  KEY `FKt5j15ia4hgw8s0fqep5m7cmlw` (`license_no`),
+  KEY `FKc0591vc6kv01pcf35j1eqtvjt` (`adhar_no`),
+  CONSTRAINT `FKa333w2ba4sw2kp9q20g33jd9n` FOREIGN KEY (`car_model`) REFERENCES `car_details` (`car_model`),
+  CONSTRAINT `FKc0591vc6kv01pcf35j1eqtvjt` FOREIGN KEY (`adhar_no`) REFERENCES `account_details` (`adhar_no`),
+  CONSTRAINT `FKhd8oojnpo7t071i4xkqkbxa0x` FOREIGN KEY (`o_id`) REFERENCES `customer_pickup` (`o_id`),
+  CONSTRAINT `FKt5j15ia4hgw8s0fqep5m7cmlw` FOREIGN KEY (`license_no`) REFERENCES `driver_details` (`license_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders_details`
+--
+
+LOCK TABLES `orders_details` WRITE;
+/*!40000 ALTER TABLE `orders_details` DISABLE KEYS */;
+INSERT INTO `orders_details` VALUES (2,103,'L-221',1234567812345673),(4,103,'L-221',1234567812345674),(5,103,'L-221',1234567812345674),(6,103,'L-221',1234567812345674),(7,103,'L-221',1234567812345674),(11,101,'L-221',32326262626),(13,101,NULL,32326262626),(14,103,'L-223',32326262626),(15,103,'L-224',32326262626),(16,150,'L-223',32326262626),(17,102,'L-222',32326262626),(18,104,'L-223',32326262626),(21,108,'L-224',32326262626),(23,101,'L-221',32326262626),(24,150,'L-222',5555666644448888),(26,106,'L-222',32326262626),(27,108,'L-221',32326262626),(30,107,'L-224',5555666644448888);
+/*!40000 ALTER TABLE `orders_details` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-03-09 20:15:48

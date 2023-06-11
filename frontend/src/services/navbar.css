@@ -1,0 +1,31 @@
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  span {
+    color: #ff0000;
+  }
+  ul li {
+    list-style: none;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  li:hover {
+    color: #2dfc52;
+  }
+  
+  
